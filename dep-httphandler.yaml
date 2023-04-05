@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: httphandler
+  name: httphandler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: httphandler
+  template:
+    metadata:
+      labels:
+        app: httphandler
+    spec:
+      containers:
+      - image: public.ecr.aws/k9t3d5o9/badhttphandler:multistage
+        name: badhttphandler

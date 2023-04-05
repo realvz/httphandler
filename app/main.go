@@ -28,7 +28,7 @@ var GetRequestHandler = http.HandlerFunc(func(w http.ResponseWriter, r *http.Req
 		http.Error(w, "Bad Request", http.StatusBadRequest)
 	} else {
 		// Return a normal response
-		w.Write([]byte("Hello World!"))
+		w.Write([]byte("Hello World!\n"))
 	}
 })
 
